@@ -5,15 +5,17 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Labeler
+name: greet
 on: [push]
 
 jobs:
   label:
 
-    runs-on: ubuntu-latest
-
+    runs-on: windows-latest
+    name: a job to say hello
+    
     steps:
     - uses: actions/hello-world-javascript-action@main
+    
       with:
-         who-to-greet: 'Mona the Octocat'
+         who-to-greet: 'Paige'
