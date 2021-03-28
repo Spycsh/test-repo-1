@@ -18,3 +18,7 @@ jobs:
     
     steps:
     - uses: Chen-Zidi/get-modified-contents-action@main
+      id: get-content
+    - name: print modified contents
+      run: echo "content- ${{ steps.get-content.outputs.content}}"
+
