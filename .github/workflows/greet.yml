@@ -17,8 +17,10 @@ jobs:
     name: a job to say hello
     
     steps:
-    - uses: Chen-Zidi/get-modified-contents-action@main
+    - name: get modified contents
+      uses: Chen-Zidi/get-modified-contents-action@main
       id: get-content
     - name: print modified contents
       run: echo "content- ${{ steps.get-content.outputs.content}}"
+
 
