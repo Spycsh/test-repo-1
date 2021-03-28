@@ -18,7 +18,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
          - name: Get Title
-           uses: Slashgear/action-check-pr-title@main
+           uses: Spycsh/action-check-pr-title@main
            with:
             regex: '([a-z])+' # Regex the title should match.
           
