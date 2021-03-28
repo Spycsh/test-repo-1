@@ -17,7 +17,7 @@ jobs:
     name: a job to say hello
     
     steps:
-    - uses: actions/hello-world-javascript-action@main
+    - uses: Chen-Zidi/action-get-modified-content@master
     
       with:
          who-to-greet: 'Paige'
