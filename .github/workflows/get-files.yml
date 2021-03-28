@@ -22,11 +22,13 @@ jobs:
         id: get-changed-files
         # You may pin to the exact commit or the version.
         #uses: lots0logs/gh-action-get-changed-files@2.1.4
-        uses: Chen-Zidi/gh-action-get-changed-files@master
+        #uses: Chen-Zidi/gh-action-get-changed-files@master
+        uses: jitterbit/get-changed-files@v1
         with:
           # GitHub Personal Access Token
-          token: 44627a22d077ee17ee5edc277715dc1011790bb2
-      - name: Get files
-        run: echo " ${{ steps.get-changed-files.outputs.modified }}"
+          # token: 44627a22d077ee17ee5edc277715dc1011790bb2
+          format: 'json'
+#       - name: Get files
+#         run: echo " ${{ steps.get-changed-files.outputs.modified }}"
       
         
