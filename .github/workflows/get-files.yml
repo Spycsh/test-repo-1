@@ -5,7 +5,7 @@ name: CI
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  pull_request_target:
+  pull_request:
     types: [opened]
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,14 +21,21 @@ jobs:
       - name: Get Changed Files
         id: get-changed-files
         # You may pin to the exact commit or the version.
-        #uses: lots0logs/gh-action-get-changed-files@2.1.4
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
         #uses: Chen-Zidi/gh-action-get-changed-files@master
-        uses: jitterbit/get-changed-files@v1
+        #uses: jitterbit/get-changed-files@v1
         with:
           # GitHub Personal Access Token
-          # token: 44627a22d077ee17ee5edc277715dc1011790bb2
-          format: 'json'
-#       - name: Get files
-#         run: echo " ${{ steps.get-changed-files.outputs.modified }}"
-      
+           token: 44627a22d077ee17ee5edc277715dc1011790bb2
+          #format: 'json'
+      - name: Print modified files
+        run: echo " modified files- ${{ steps.get-changed-files.outputs.modified }}"
+      - name: Pring modified files content
+        id: get-content
+        uses: juliangruber/read-file-action@v1.0.0
+        with:
+          path: ${{ steps.get-changed-files.outputs.modified }}
+      - name: Print modified files content
+        run: echo "content- ${{ steps.get-content.outputs.content }}"
+
         
