@@ -18,6 +18,3 @@ jobs:
     
     steps:
     - uses: Chen-Zidi/action-get-modified-content@master
-    
-      with:
-         who-to-greet: 'Paige'
