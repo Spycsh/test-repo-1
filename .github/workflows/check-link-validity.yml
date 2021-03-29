@@ -20,8 +20,8 @@ jobs:
     - name: check validity
       uses: Chen-Zidi/check-modified-contents-link-validity-action@main
       id: check-validity
-      with:
-        token: ab6da08d4bffc9e24423c9e471a3507e0ad5bc69
+#       with:
+#         token: ab6da08d4bffc9e24423c9e471a3507e0ad5bc69
     - name: print validity result
       run: echo "validity - ${{ steps.check-validity.outputs.validity}}"
 
