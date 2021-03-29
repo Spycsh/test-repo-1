@@ -21,7 +21,7 @@ jobs:
       uses: Chen-Zidi/check-modified-contents-link-validity-action@main
       id: check-validity
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: a4a24613b44bdd61de18602830555065bfac1add
     - name: print validity result
       run: echo "validity - ${{ steps.check-validity.outputs.validity}}"
 
