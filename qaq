@@ -1,0 +1,27 @@
+diff --git a/jj b/jj \
+index aa2fc61..6c40dd4 100644   \
+--- a/jj    \
++++ b/jj    \
+@@ -1 +1,6 @@   \
+ jj \
+ +https://patch-diff.githubusercontent.com/raw/Chen-Zidi/test-repo/pull/23.diff 这个链接不错 \
+ +https://localhost:8080 \
+ +https://www.baidu.com  \
+ +http://www.baidu.c o m    \
+ -https://www.baidu.c o m    \
+ -https://192.168.3.1/tree    \
++www.jj.com \
++www.jj.com \
++www.baidu.com  \
++http://www.jj.com \
++https://www.jj.com \
++www.jj.comwww.jj.comwww.jj.com \
+diff --git a/readme.md b/readme.md  \
+index 24fc23f..0c7c527 100644   \
+--- a/readme.md \
++++ b/readme.md \
+@@ -4,3 +4,4 @@ change! \
+ test   \
+ tt \
+ test   \
++popo   ";
