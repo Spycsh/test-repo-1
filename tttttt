@@ -1,0 +1,15 @@
+test!!!
+$ git rev-parse -q --git-dir
+$ git remote -v
+$ git config --get-all hub.host
+> GET https://api.github.com/user
+> Authorization: token [REDACTED]
+> Accept: application/vnd.github.v3+json;charset=utf-8
+< HTTP 403
+{"message":"Resource not accessible by integration","documentation_url":"https://developer.github.com/v3/users/#get-the-authenticated-user"}
+> GET https://api.github.com/repos/rtimush/test/git/refs
+> Authorization: token 
+> Accept: application/vnd.github.v3+json;charset=utf-8
+< HTTP 401
+{"message":"Bad credentials","documentation_url":"https://developer.github.com/v3"}
+{"message":"Bad credentials","documentation_url":"https://developer.github.com/v3"}
