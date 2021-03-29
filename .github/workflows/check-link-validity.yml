@@ -5,7 +5,7 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: greet
+name: check-link-validity
 on: 
     pull_request_target:
       types: [opened]
@@ -14,13 +14,13 @@ jobs:
   label:
 
     runs-on: windows-latest
-    name: a job to say hello
+    name: check link validity
     
     steps:
-    - name: get modified contents
-      uses: Chen-Zidi/get-modified-contents-action@main
-      id: get-content
-    - name: print modified contents
-      run: echo "content- ${{ steps.get-content.outputs.content}}"
+    - name: check validity
+      uses: Chen-Zidi/check-modified-contents-link-validity-action@main
+      id: check-validity
+    - name: print validity result
+      run: echo "validity - ${{ steps.check-validity.outputs.validity}}"
 
 
